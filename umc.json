@@ -1,0 +1,436 @@
+{
+    "list": [
+      {
+        "Indicator": "Thermal overload trip",
+        "Code": 0,
+        "RootCause": "Load side",
+        "SuggestedAction": "Trip because of thermal overload of \r\nthe motor.\r\nCheck process conditions  \r\nCheck if the cooling time is too \r\nshort \r\nCheck Ie and trip class settings \r\nCheck current factor if configured"
+      },
+      {
+        "Indicator": "Phase loss",
+        "Code": 1,
+        "RootCause": "Supply side \r\nLoad side \r\nContactors",
+        "SuggestedAction": "At least one phase current is below \r\nthe phase loss threshold\r\nCheck for blown fuse \r\nCheck for loose contacts \r\nCheck contact wear"
+      },
+      {
+        "Indicator": "Phase imbalance",
+        "Code": 2,
+        "RootCause": "Supply side \r\nLoad side \r\nContactors",
+        "SuggestedAction": "The current in one phase is below \r\nthe adjusted threshold.\r\nCheck supply side \r\nCheck for loose contacts \r\nCheck contact wear"
+      },
+      {
+        "Indicator": "Locked Rotor",
+        "Code": 3,
+        "RootCause": "Load Side",
+        "SuggestedAction": "The rotor is locked. Load too heavy \r\nfor motor."
+      },
+      {
+        "Indicator": "Thermal model reached \r\nwarning level",
+        "Code": 4,
+        "RootCause": "Load Side",
+        "SuggestedAction": "Thermal model reached warning \r\nlevel. If overload condition remains \r\na trip soon follows.\r\nCheck motor load condition \r\nCheck for mechanical problems"
+      },
+      {
+        "Indicator": "PTC overtemperature",
+        "Code": 5,
+        "RootCause": "Load side \r\nEnvironment",
+        "SuggestedAction": "PTC element indicated that motor \r\ntemperature is too high\r\nCheck motor environment and load \r\nconditions"
+      },
+      {
+        "Indicator": "PTC wiring problem ",
+        "Code": 6,
+        "RootCause": "Summary message. See \r\ndetailed messages for more information.",
+        "SuggestedAction": "See codes 83/84"
+      },
+      {
+        "Indicator": "Check-back error",
+        "Code": 7,
+        "RootCause": "Summary message. See \r\ndetailed messages for \r\nmore information.",
+        "SuggestedAction": "See codes 80...82"
+      },
+      {
+        "Indicator": "Motor current below low \r\ncurrent trip threshold",
+        "Code": 8,
+        "RootCause": "Process \r\nLoad side \r\nLoad side mechanics",
+        "SuggestedAction": "Motor current is below user-defined \r\nthreshold e.g. motor running idle, \r\ndry running pump, conveyer belt \r\nbroken ...\r\nCheck motor load and motor / pro-\r\ncess conditions. Wait until cooling \r\ntime is over."
+      },
+      {
+        "Indicator": "Motor current below low \r\ncurrent warning threshold",
+        "Code": 9,
+        "RootCause": "Process \r\nLoad side \r\nLoad side mechanics",
+        "SuggestedAction": "Motor current is below user-defined \r\nthreshold e.g. motor running idle, \r\ndry running pump, conveyer belt \r\nbroken ...\r\nCheck motor load and motor / pro-\r\ncess conditions"
+      },
+      {
+        "Indicator": "Motor current above high \r\ncurrent trip threshold",
+        "Code": 10,
+        "RootCause": "Load side",
+        "SuggestedAction": "Motor current above threshold \r\ncaused e.g. by jammed equipment\r\nCheck process conditions (remove \r\nblocking cause). Wait until cooling \r\ntime is over."
+      },
+      {
+        "Indicator": "Motor current above high \r\ncurrent warning threshold",
+        "Code": 11,
+        "RootCause": "Load side",
+        "SuggestedAction": "Motor current above user-defined \r\nthreshold.\r\nCheck motor load and motor / process conditions."
+      },
+      {
+        "Indicator": "Earth fault (external or \r\ninternal sensor) above trip \r\nthreshold",
+        "Code": 12,
+        "RootCause": "Load side electrical",
+        "SuggestedAction": "Connection between one or more \r\nphases and ground\r\nCheck wiring / motor (isolation \r\nproblem)"
+      },
+      {
+        "Indicator": "Earthfault current above \r\nwarning threshold",
+        "Code": 13,
+        "RootCause": "Load side electrical",
+        "SuggestedAction": "Connection between one or more \r\nphases and ground\r\nCheck wiring / motor (isolation \r\nproblem), See above"
+      },
+      {
+        "Indicator": "UMC self-test error",
+        "Code": 14,
+        "RootCause": "Electronics",
+        "SuggestedAction": "Hardware fault detected\r\nReplace UMC"
+      },
+      {
+        "Indicator": "Actuator problem",
+        "Code": 15,
+        "RootCause": "Load side mechanics ",
+        "SuggestedAction": "Open/close time of actuator ex-\r\nceeded because of tight valve or \r\nother mechanical reasons.\r\nCheck runtime parameter and limit \r\nand torque switch wiring"
+      },
+      {
+        "Indicator": "IO module missing",
+        "Code": 16,
+        "RootCause": "Electronics, Wiring",
+        "SuggestedAction": "Communication cable not con-\r\nnected. Cable break or IO module \r\nhardware error."
+      },
+      {
+        "Indicator": "Custom application error \r\n(e.g. download incom-\r\nplete)",
+        "Code": 17,
+        "RootCause": "Configuration",
+        "SuggestedAction": "An unrecoverable error was de-\r\ntected while processing the custom \r\napplication (e.g. checksum error)\r\nThe version of application editor \r\nand UMC are not compatible"
+      },
+      {
+        "Indicator": "IO module error",
+        "Code": 18,
+        "RootCause": "Electronics",
+        "SuggestedAction": "A self-test error was detected in an \r\nIO module.\r\nCheck the LEDs on the module \r\nReplace the module"
+      },
+      {
+        "Indicator": "Aux1: Error or warning \r\ntriggered from auxiliary \r\nfunction block input 0",
+        "Code": 19,
+        "RootCause": "User-defined",
+        "SuggestedAction": "The digital input of an IO module \r\nhas created a trip/warning. Reason depends on what you have \r\nconnected to the input. Note: If the \"AuxWarnFault\" func-\r\ntion block is used in a different way \r\nthan in the predefined applications \r\nalso other inputs than the DX1xx \r\ncan be the fault source."
+      },
+      {
+        "Indicator": "Aux2: Error or warning \r\ntriggered from auxiliary \r\nfunction block input 1",
+        "Code": 20,
+        "RootCause": "User-defined",
+        "SuggestedAction": "The digital input of an IO module \r\nhas created a trip/warning. Reason depends on what you have \r\nconnected to the input. Note: If the \"AuxWarnFault\" func-\r\ntion block is used in a different way \r\nthan in the predefined applications \r\nalso other inputs than the DX1xx \r\ncan be the fault source."
+      },
+      {
+        "Indicator": "Aux3: Error or warning \r\ntriggered from auxiliary \r\nfunction block input 2",
+        "Code": 21,
+        "RootCause": "User-defined",
+        "SuggestedAction": "The digital input of an IO module \r\nhas created a trip/warning. Reason depends on what you have \r\nconnected to the input. Note: If the \"AuxWarnFault\" func-\r\ntion block is used in a different way \r\nthan in the predefined applications \r\nalso other inputs than the DX1xx \r\ncan be the fault source."
+      },
+      {
+        "Indicator": "Aux4: Error or warning \r\ntriggered from auxiliary \r\nfunction block input 3",
+        "Code": 22,
+        "RootCause": "User-defined",
+        "SuggestedAction": "The digital input of an IO module \r\nhas created a trip/warning. Reason depends on what you have \r\nconnected to the input. Note: If the \"AuxWarnFault\" func-\r\ntion block is used in a different way \r\nthan in the predefined applications \r\nalso other inputs than the DX1xx \r\ncan be the fault source."
+      },
+      {
+        "Indicator": "Aux5: Error or warning \r\ntriggered from auxiliary \r\nfunction block input 4",
+        "Code": 23,
+        "RootCause": "User-defined",
+        "SuggestedAction": "The digital input of an IO module \r\nhas created a trip/warning. Reason depends on what you have \r\nconnected to the input. Note: If the \"AuxWarnFault\" func-\r\ntion block is used in a different way \r\nthan in the predefined applications \r\nalso other inputs than the DX1xx \r\ncan be the fault source."
+      },
+      {
+        "Indicator": "Aux6: Error or warning \r\ntriggered from auxiliary \r\nfunction block input 5",
+        "Code": 24,
+        "RootCause": "User-defined",
+        "SuggestedAction": "The digital input of an IO module \r\nhas created a trip/warning. Reason depends on what you have \r\nconnected to the input. Note: If the \"AuxWarnFault\" func-\r\ntion block is used in a different way \r\nthan in the predefined applications \r\nalso other inputs than the DX1xx \r\ncan be the fault source."
+      },
+      {
+        "Indicator": "Multifunction input 0",
+        "Code": 25,
+        "RootCause": "User-defined",
+        "SuggestedAction": "A multifunction input of the UMC \r\nhas triggered a trip.\r\nThe reason depends on what you \r\nhave connected to the input."
+      },
+      {
+        "Indicator": "Multifunction input 1",
+        "Code": 26,
+        "RootCause": "User-defined",
+        "SuggestedAction": "A multifunction input of the UMC \r\nhas triggered a trip.\r\nThe reason depends on what you \r\nhave connected to the input."
+      },
+      {
+        "Indicator": "Multifunction input 2",
+        "Code": 27,
+        "RootCause": "User-defined",
+        "SuggestedAction": "A multifunction input of the UMC \r\nhas triggered a trip.\r\nThe reason depends on what you \r\nhave connected to the input."
+      },
+      {
+        "Indicator": "Underload Power",
+        "Code": 34,
+        "RootCause": "Load side mechanics",
+        "SuggestedAction": "The motor load is too low. Check \r\nthe load e.g. if a pump is running \r\ndry or a conveyer load is broken."
+      },
+      {
+        "Indicator": "Overload Power ",
+        "Code": 35,
+        "RootCause": "Load side mechanics ",
+        "SuggestedAction": "The motor load is too high. Check if  the load is blocked or tight."
+      },
+      {
+        "Indicator": "Voltage Out of Spec",
+        "Code": 36,
+        "RootCause": "Load side",
+        "SuggestedAction": "The supply voltage is too low or too \r\nhigh. Check the motor supply."
+      },
+      {
+        "Indicator": "THD Warning",
+        "Code": 37,
+        "RootCause": "Supply side",
+        "SuggestedAction": "The harmonics on the supply side \r\nare too high. Check your network."
+      },
+      {
+        "Indicator": "Num Starts Overrun",
+        "Code": 43,
+        "RootCause": "Application",
+        "SuggestedAction": "The motor was started too frequent."
+      },
+      {
+        "Indicator": "Just One Start Left",
+        "Code": 44,
+        "RootCause": "Application",
+        "SuggestedAction": "The motor was started too frequent."
+      },
+      {
+        "Indicator": "Cooling time running",
+        "Code": 45,
+        "RootCause": "Process, Load side",
+        "SuggestedAction": "Motor was tripped due to thermal \r\noverload. Restart is possible after \r\ncooling time is over"
+      },
+      {
+        "Indicator": "Parameter out of range",
+        "Code": 54,
+        "RootCause": "Electronics, Configuration",
+        "SuggestedAction": "Someone tried to write a parameter \r\nwhich is outside the specifications\r\nCheck the parameter number that \r\nis causing the problem and change \r\nthe value. \r\nWhen writing parameters from \r\nwithin a PLC check your program."
+      },
+      {
+        "Indicator": "Torque open in intermedi-\r\nate position",
+        "Code": 64,
+        "RootCause": "Actuator mechanics",
+        "SuggestedAction": "Tight operation or wiring problem."
+      },
+      {
+        "Indicator": "Torque close in intermedi-\r\nate position",
+        "Code": 65,
+        "RootCause": "Actuator mechanics",
+        "SuggestedAction": "Tight operation or wiring problem."
+      },
+      {
+        "Indicator": "Pos. open and closed at \r\nsame time",
+        "Code": 66,
+        "RootCause": "Actuator mechanics",
+        "SuggestedAction": "Wiring / position switch problem"
+      },
+      {
+        "Indicator": "End pos. open not left \r\nwithin specified time",
+        "Code": 67,
+        "RootCause": "Actuator mechanics",
+        "SuggestedAction": "Wiring / position switch problem \r\nor wrong adjustment of position \r\nswitch."
+      },
+      {
+        "Indicator": "End pos. closed not left \r\nwithin specified time",
+        "Code": 68,
+        "RootCause": "Actuator mechanics",
+        "SuggestedAction": "Wiring / position switch problem \r\nor wrong adjustment of position \r\nswitch."
+      },
+      {
+        "Indicator": "End position open with-\r\nout command",
+        "Code": 69,
+        "RootCause": "Actuator mechanics",
+        "SuggestedAction": "Wiring / position switch problem."
+      },
+      {
+        "Indicator": "End position closed with-\r\nout command",
+        "Code": 70,
+        "RootCause": "Actuator mechanics",
+        "SuggestedAction": "Wiring / position switch problem."
+      },
+      {
+        "Indicator": "Left pos. open without \r\ncommand",
+        "Code": 71,
+        "RootCause": "Actuator mechanics",
+        "SuggestedAction": "Wiring / position switch problem."
+      },
+      {
+        "Indicator": "Left pos. close without \r\ncommand",
+        "Code": 72,
+        "RootCause": "Actuator mechanics",
+        "SuggestedAction": "Wiring / position switch problem."
+      },
+      {
+        "Indicator": "Motor operation hour \r\nexceeded",
+        "Code": 74,
+        "RootCause": "Load side mechanical",
+        "SuggestedAction": "Max. motor operation hours \r\nreached.\r\nPerform motor maintenance \r\nReset counter"
+      },
+      {
+        "Indicator": "Wrong password",
+        "Code": 76,
+        "RootCause": "Electronics",
+        "SuggestedAction": "N/A"
+      },
+      {
+        "Indicator": "Line frequency out of \r\nrange",
+        "Code": 77,
+        "RootCause": "Supply side",
+        "SuggestedAction": "Check supply"
+      },
+      {
+        "Indicator": "Wrong phase sequence \r\n(reversal)",
+        "Code": 78,
+        "RootCause": "Supply side,  \r\nLoad side",
+        "SuggestedAction": "Phase order is not L1/L2/L3."
+      },
+      {
+        "Indicator": "CB relay 0",
+        "Code": 80,
+        "RootCause": "Wiring, \r\nContactors",
+        "SuggestedAction": "Expected feedback from a contac-\r\ntor is missing after checkback time \r\nwas over.\r\nCheck wiring of auxiliary contact to \r\nthe correct UMC input. \r\nCheck contactor \r\nIncrease checkback time"
+      },
+      {
+        "Indicator": "CB current",
+        "Code": 82,
+        "RootCause": "Contactors, \r\nSupply side, \r\nLoad side",
+        "SuggestedAction": "No motor current after motor was \r\nswitched on and checkback time \r\nwas over. Or motor current falls \r\nbelow 20% while motor is running.\r\nCheck supply side \r\nCheck that Ie was set correctly \r\nCheck current factor if set \r\nIncrease checkback time"
+      },
+      {
+        "Indicator": "PTC wire break ",
+        "Code": 83,
+        "RootCause": "Wiring",
+        "SuggestedAction": "Check between UMC and motor"
+      },
+      {
+        "Indicator": "PTC short-circuit",
+        "Code": 84,
+        "RootCause": "Wiring",
+        "SuggestedAction": "Check wiring between UMC and \r\nmotor"
+      },
+      {
+        "Indicator": "DX111/DX122 module \r\nmissing",
+        "Code": 85,
+        "RootCause": "Wiring, Electronics",
+        "SuggestedAction": "The IO module does not respond \r\nduring start-up of UMC.\r\nCheck wiring between UMC and module \r\nCheck supply of module \r\nCheck status LEDs of the module"
+      },
+      {
+        "Indicator": "VX1xx module missing ",
+        "Code": 88,
+        "RootCause": "Wiring, Electronics",
+        "SuggestedAction": "The VI15x module does not re-\r\nspond during start-up of the UMC. \r\nCheck wiring between UMC and module \r\nCheck supply of module \r\nCheck status LEDs of the module"
+      },
+      {
+        "Indicator": "Overload analog output \r\nDX111/DX122",
+        "Code": 92,
+        "RootCause": "Wiring, connected meter has a defect",
+        "SuggestedAction": "Check wiring, short circuit at analogue output"
+      },
+      {
+        "Indicator": "Wire break analogue \r\noutput DX111/DX122",
+        "Code": 93,
+        "RootCause": "Wiring",
+        "SuggestedAction": "Check Wiring"
+      },
+      {
+        "Indicator": "Self-test failure DX111/\r\nDX122",
+        "Code": 94,
+        "RootCause": "Wiring",
+        "SuggestedAction": "Check Wiring"
+      },
+      {
+        "Indicator": "U below trip/warn level",
+        "Code": 95,
+        "RootCause": "Motor supply voltage is \r\ntoo low.",
+        "SuggestedAction": "Check supply side: E.g. circuit \r\nbreaker, fuses, wiring and the feed-\r\ning."
+      },
+      {
+        "Indicator": "U below trip/warn level",
+        "Code": 96,
+        "RootCause": "Motor supply voltage is \r\ntoo low.",
+        "SuggestedAction": "Check supply side: E.g. circuit \r\nbreaker, fuses, wiring and the feed-\r\ning."
+      },
+      {
+        "Indicator": "U above trip/warn level",
+        "Code": 97,
+        "RootCause": "Motor supply voltage is \r\ntoo high.",
+        "SuggestedAction": "Check supply side: E.g. circuit \r\nbreaker, fuses, wiring and the feed-\r\ning."
+      },
+      {
+        "Indicator": "U above trip/warn level",
+        "Code": 98,
+        "RootCause": "Motor supply voltage is \r\ntoo high.",
+        "SuggestedAction": "Check supply side: E.g. circuit \r\nbreaker, fuses, wiring and the feed-\r\ning."
+      },
+      {
+        "Indicator": "P below trip/warn level ",
+        "Code": 116,
+        "RootCause": "Active power consumption \r\nof the motor is too low.",
+        "SuggestedAction": "Either the motor is idle (not loaded) \r\nor the motor load is not connected \r\nbecause of a broken belt or a dry \r\nrunning pump etc.\r\nCheck load side"
+      },
+      {
+        "Indicator": "P below trip/warn level ",
+        "Code": 117,
+        "RootCause": "Active power consumption \r\nof the motor is too low.",
+        "SuggestedAction": "Either the motor is idle (not loaded) \r\nor the motor load is not connected \r\nbecause of a broken belt or a dry \r\nrunning pump etc.\r\nCheck load side"
+      },
+      {
+        "Indicator": "PF below trip/warn level",
+        "Code": 120,
+        "RootCause": "Active power consumption \r\nof the motor is too low",
+        "SuggestedAction": "Either the motor is idle (not loaded) \r\nor the motor load is not connected \r\nbecause of a broken belt or a dry \r\nrunning pump etc.\r\nCheck load side"
+      },
+      {
+        "Indicator": "PF below trip/warn level",
+        "Code": 121,
+        "RootCause": "Active power consumption \r\nof the motor is too low",
+        "SuggestedAction": "Either the motor is idle (not loaded) \r\nor the motor load is not connected \r\nbecause of a broken belt or a dry \r\nrunning pump etc.\r\nCheck load side"
+      },
+      {
+        "Indicator": "Phase loss (voltage)",
+        "Code": 122,
+        "RootCause": "No voltage on one more \r\nphases. Possible causes \r\nare a blown fuse or a wire \r\nbreak.",
+        "SuggestedAction": "Check fuses \r\nCheck wiring on supply side."
+      },
+      {
+        "Indicator": "Phase imbalance  \r\n(voltage)",
+        "Code": 123,
+        "RootCause": "There is a high imbal-\r\nance on supply side e.g. \r\nbecause of unsymmetrical \r\nload of the three phases.",
+        "SuggestedAction": "Check supply side especially the \r\nfuses and supply line."
+      },
+      {
+        "Indicator": "Voltage out of range",
+        "Code": 124,
+        "RootCause": "The voltage is out of the \r\nspecified voltage range",
+        "SuggestedAction": "Check supply side. See 95 – 98."
+      },
+      {
+        "Indicator": "Wrong Phase Sequence \r\n(voltage)",
+        "Code": 125,
+        "RootCause": "The phases were wired in \r\nincorrect order.",
+        "SuggestedAction": "Check wiring"
+      },
+      {
+        "Indicator": "Voltage DIP",
+        "Code": 144,
+        "RootCause": "Undervoltage / no voltage \r\nsituation is too long",
+        "SuggestedAction": "The DIP took longer than config-\r\nured in parameter  Voltage Dip \r\nDuration"
+      },
+      {
+        "Indicator": "Parameter up/download",
+        "Code": 145,
+        "RootCause": "A problem occured dur-\r\ning parameter exchange \r\nbetween the UMC and the \r\nLCD panel.",
+        "SuggestedAction": "Check that the parameters / appli-\r\ncation stored in the LCD panel can \r\nbe handled from the used UMC.\r\nDo not remove the panel while \r\nparameter exchange\r\nDo not remove power while parameter exchange."
+      }
+    ]
+  }
